@@ -76,7 +76,7 @@ class TestSuite {
 	bool removeFront();
 
     private:
-    const std::vector<int>& vectorCopy;
+    // const std::vector<int>& vectorCopy;
 };
 
 #endif
