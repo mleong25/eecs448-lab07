@@ -9,6 +9,7 @@ void TestSuite::runTest() {
     std::cout << "|===============|\n";
 
     test1();
+    test2();
 }
 
 void TestSuite::test1() {
@@ -26,3 +27,18 @@ void TestSuite::test1() {
     }
 }
 
+void TestSuite::test2() {
+    LinkedListOfInts testList;
+	bool hasPassed = false;
+
+    testList.addBack(0);
+	std::cout << "TEST: Size of list on addBack()\n"; 
+
+	hasPassed = testList.size() == 1;
+	
+    if(hasPassed) {
+        std::cout << "\tPASSED\n" << std::endl;
+    } else {
+        std::cout << "\tFAILED\n" << std::endl;
+    }
+}

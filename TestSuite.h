@@ -27,53 +27,16 @@ class TestSuite {
     void runTest();
 
 	/** @pre None.
-	*   @post Prints the passed/failed test for isEmpty()
+	*   @post Tests if the size of an empty list is 0.
 	*   @return None.
 	*/	
 	void test1();
 
 	/** @pre None.
-	*   @post None.
-	*   @return the number of elements in the list.
+	*   @post Tests the size of the list after calling addBack()
+	*   @return None.
 	*/	
-	int size() const;
-
-	/** @pre the value is a valid T.
-	*   @post none.
-	*   @return true if the value is in the list, false otherwise.
-	*/	
-	bool search(int value) const;
-
-	/** @pre None
-	*   @post None
-	*   @return A standard vector with the contents of the list
-	*   NOTE: This method is guaranteed to work. It's only one guaranteed though
-	*/	
-	std::vector<int> toVector() const;
-
-	/** @pre the value is a valid T.
-	*   @post One new element added to the end of the list.
-	*   @return none.
-	*/	
-	void addBack(int value);
-
-	/** @pre the value is a valid T.
-	*   @post One new element added to the front of the list.
-	*   @return none.
-	*/	
-	void addFront(int value);
-
-	/** @pre None
-	*   @post One element is removed from the back of the list.
-	*   @return true if the back element was removed, false if the list is empty.
-	*/	
-	bool removeBack();	
-
-	/** @pre None
-	*   @post One element is removed from the front of the list.
-	*   @return true if the front element was removed, false if the list is empty.
-	*/	
-	bool removeFront();
+	void test2();
 
     private:
     // const std::vector<int>& vectorCopy;
