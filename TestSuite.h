@@ -38,6 +38,12 @@ class TestSuite {
 	*/	
 	void test2();
 
+    /** @pre None.
+	*   @post Tests the size of the list after calling addFront()
+	*   @return None.
+	*/	
+	void test3();
+
     private:
     // const std::vector<int>& vectorCopy;
 };

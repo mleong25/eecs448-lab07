@@ -10,13 +10,14 @@ void TestSuite::runTest() {
 
     test1();
     test2();
+    test3();
 }
 
 void TestSuite::test1() {
     LinkedListOfInts testList;
 	bool hasPassed = false;
 
-	std::cout << "TEST: Size of empty list is zero\n"; 
+	std::cout << "TEST 1: Size of empty list is zero\n"; 
 
 	hasPassed = testList.size() == 0;
 	
@@ -32,7 +33,23 @@ void TestSuite::test2() {
 	bool hasPassed = false;
 
     testList.addBack(0);
-	std::cout << "TEST: Size of list on addBack()\n"; 
+	std::cout << "TEST 2: Size of list on addBack()\n"; 
+
+	hasPassed = testList.size() == 1;
+	
+    if(hasPassed) {
+        std::cout << "\tPASSED\n" << std::endl;
+    } else {
+        std::cout << "\tFAILED\n" << std::endl;
+    }
+}
+
+void TestSuite::test3() {
+    LinkedListOfInts testList;
+	bool hasPassed = false;
+
+    testList.addFront(0);
+	std::cout << "TEST 3: Size of list on addFront()\n"; 
 
 	hasPassed = testList.size() == 1;
 	
