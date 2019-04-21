@@ -16,6 +16,7 @@ void TestSuite::runTest() {
     test6();
     test7();
     test8();
+    test9();
 }
 
 void TestSuite::test1() {
@@ -184,3 +185,42 @@ void TestSuite::test8() {
         std::cout << "\tFAILED\n" << std::endl;
     }
 }
+
+void TestSuite::test9() {
+    LinkedListOfInts testList;
+	bool hasPassed = false;
+
+    testList.addFront(2);
+    testList.addFront(1);
+    testList.addFront(0);
+    testVector = testList.toVector();
+    myVector.push_back(0);
+    myVector.push_back(1);
+    myVector.push_back(2);
+	std::cout << "TEST 9: Checks if addFront produces the correct list\n";
+
+	hasPassed = testVector == myVector;
+	
+    if(hasPassed) {
+        std::cout << "\tPASSED\n" << std::endl;
+    } else {
+        std::cout << "\tFAILED\n" << std::endl;
+    }
+}
+
+// void TestSuite::test10() {
+//     LinkedListOfInts testList;
+// 	bool hasPassed = false;
+
+//     testList.addFront(0);
+//     testList.removeBack();
+// 	std::cout << "TEST 6: Size of list on addFront() followed by removeBack()\n"; 
+
+// 	hasPassed = testList.size() == 0;
+	
+//     if(hasPassed) {
+//         std::cout << "\tPASSED\n" << std::endl;
+//     } else {
+//         std::cout << "\tFAILED\n" << std::endl;
+//     }
+// }

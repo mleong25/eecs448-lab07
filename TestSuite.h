@@ -74,8 +74,21 @@ class TestSuite {
 	*/	
     void test8();
 
+    /** @pre None.
+	*   @post Tests if addFront() produces a proper list.
+	*   @return None.
+	*/	
+    void test9();
+
+    /** @pre None.
+	*   @post Tests if addBack() produces a proper list.
+	*   @return None.
+	*/	
+    void test10();
+
     private:
-    // const std::vector<int>& vectorCopy;
+    std::vector<int> testVector;
+    std::vector<int> myVector;
 };
 
 #endif
