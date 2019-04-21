@@ -19,6 +19,7 @@ void TestSuite::runTest() {
     test9();
     test10();
     test11();
+    test12();
 }
 
 void TestSuite::test1() {
@@ -244,6 +245,28 @@ void TestSuite::test11() {
     myVector.push_back(0);
     myVector.push_back(1);
 	std::cout << "TEST 11: Checks if removeBack() produces the correct list\n";
+
+	hasPassed = testVector == myVector;
+	
+    if(hasPassed) {
+        std::cout << "\tPASSED\n" << std::endl;
+    } else {
+        std::cout << "\tFAILED\n" << std::endl;
+    }
+}
+
+void TestSuite::test12() {
+    LinkedListOfInts testList;
+	bool hasPassed = false;
+
+    testList.addBack(0);
+    testList.addBack(1);
+    testList.addBack(2);
+    testList.removeFront();
+    testVector = testList.toVector();
+    myVector.push_back(1);
+    myVector.push_back(2);
+	std::cout << "TEST 12: Checks if removeFront() produces the correct list\n";
 
 	hasPassed = testVector == myVector;
 	

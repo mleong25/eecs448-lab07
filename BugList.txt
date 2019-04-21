@@ -1,15 +1,24 @@
 List of Bugs Caught!
     TEST 5: Size of list on addFront() followed by removeFront()
 	    FAILED
+    Possible reason: removeFront() does decrement the size of the list
 
     TEST 6: Size of list on addFront() followed by removeBack()
         FAILED
+    Possible reason: removeBack() does decrement the size of the list
     
     TEST 7: Checking functionality of isEmpty() with a non-empty list
         FAILED
+    Possible reason: isEmpty() always return true
     
-    TEST 10: Checks if addFront produces the correct list
+    TEST 10: Checks if addBack() produces the correct list
         FAILED
+    Possible reason: addBack likely does not push values to the back of the list, likely front
 
     TEST 11: Checks if removeBack() produces the correct list
 	    FAILED
+    Possible reason: removeBack() does not properly remove the final element in the list
+
+    TEST 12: Checks if removeFront() produces the correct list
+	    FAILED
+    Possible reason: removeFront() does not properly remove the first element in the list

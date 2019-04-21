@@ -92,6 +92,12 @@ class TestSuite {
 	*/	
     void test11();
 
+    /** @pre None.
+	*   @post Tests if removeFront() functions properly.
+	*   @return None.
+	*/	
+    void test12();
+
     private:
     std::vector<int> testVector;
     std::vector<int> myVector;
