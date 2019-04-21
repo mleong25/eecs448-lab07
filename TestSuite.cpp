@@ -15,6 +15,7 @@ void TestSuite::runTest() {
     test5();
     test6();
     test7();
+    test8();
 }
 
 void TestSuite::test1() {
@@ -135,6 +136,47 @@ void TestSuite::test7() {
     testList.addFront(1);
     testList.removeBack();
 	hasPassed = testList.isEmpty();
+	
+    if(!hasPassed) {
+        std::cout << "\tPASSED\n" << std::endl;
+    } else {
+        std::cout << "\tFAILED\n" << std::endl;
+    }
+}
+
+void TestSuite::test8() {
+    LinkedListOfInts testList;
+	bool hasPassed = false;
+
+	std::cout << "TEST 8: search() on empty list should return false\n"; 
+
+	hasPassed = testList.search(0) == false;
+	
+    if(hasPassed) {
+        std::cout << "\tPASSED\n" << std::endl;
+    } else {
+        std::cout << "\tFAILED\n" << std::endl;
+    }
+
+    hasPassed = false;
+
+    std::cout << "TEST 8: search() of value not in list should return false\n"; 
+
+    testList.addFront(1);
+    hasPassed = testList.search(0) == false;
+	
+    if(hasPassed) {
+        std::cout << "\tPASSED\n" << std::endl;
+    } else {
+        std::cout << "\tFAILED\n" << std::endl;
+    }
+
+    hasPassed = false;
+
+    std::cout << "TEST 8: search() of value in list should return true\n"; 
+
+    testList.addFront(0);
+    hasPassed = testList.search(0) == true;
 	
     if(hasPassed) {
         std::cout << "\tPASSED\n" << std::endl;

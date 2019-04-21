@@ -68,6 +68,12 @@ class TestSuite {
 	*/	
     void test7();
 
+    /** @pre None.
+	*   @post Tests if search() is working properly.
+	*   @return None.
+	*/	
+    void test8();
+
     private:
     // const std::vector<int>& vectorCopy;
 };
