@@ -17,6 +17,8 @@ void TestSuite::runTest() {
     test7();
     test8();
     test9();
+    test10();
+    test11();
 }
 
 void TestSuite::test1() {
@@ -197,7 +199,7 @@ void TestSuite::test9() {
     myVector.push_back(0);
     myVector.push_back(1);
     myVector.push_back(2);
-	std::cout << "TEST 9: Checks if addFront produces the correct list\n";
+	std::cout << "TEST 9: Checks if addFront() produces the correct list\n";
 
 	hasPassed = testVector == myVector;
 	
@@ -208,19 +210,46 @@ void TestSuite::test9() {
     }
 }
 
-// void TestSuite::test10() {
-//     LinkedListOfInts testList;
-// 	bool hasPassed = false;
+void TestSuite::test10() {
+    LinkedListOfInts testList;
+	bool hasPassed = false;
 
-//     testList.addFront(0);
-//     testList.removeBack();
-// 	std::cout << "TEST 6: Size of list on addFront() followed by removeBack()\n"; 
+    testList.addBack(0);
+    testList.addBack(1);
+    testList.addBack(2);
+    testVector = testList.toVector();
+    myVector.push_back(0);
+    myVector.push_back(1);
+    myVector.push_back(2);
+	std::cout << "TEST 10: Checks if addBack() produces the correct list\n";
 
-// 	hasPassed = testList.size() == 0;
+	hasPassed = testVector == myVector;
 	
-//     if(hasPassed) {
-//         std::cout << "\tPASSED\n" << std::endl;
-//     } else {
-//         std::cout << "\tFAILED\n" << std::endl;
-//     }
-// }
+    if(hasPassed) {
+        std::cout << "\tPASSED\n" << std::endl;
+    } else {
+        std::cout << "\tFAILED\n" << std::endl;
+    }
+}
+
+void TestSuite::test11() {
+    LinkedListOfInts testList;
+	bool hasPassed = false;
+
+    testList.addBack(0);
+    testList.addBack(1);
+    testList.addBack(2);
+    testList.removeBack();
+    testVector = testList.toVector();
+    myVector.push_back(0);
+    myVector.push_back(1);
+	std::cout << "TEST 11: Checks if removeBack() produces the correct list\n";
+
+	hasPassed = testVector == myVector;
+	
+    if(hasPassed) {
+        std::cout << "\tPASSED\n" << std::endl;
+    } else {
+        std::cout << "\tFAILED\n" << std::endl;
+    }
+}

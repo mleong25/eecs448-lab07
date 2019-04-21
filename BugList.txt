@@ -5,7 +5,11 @@ List of Bugs Caught!
     TEST 6: Size of list on addFront() followed by removeBack()
         FAILED
     
-    TEST 7: isEmpty() returns true for both empty and and non-empty list
+    TEST 7: Checking functionality of isEmpty() with a non-empty list
         FAILED
     
-    
+    TEST 10: Checks if addFront produces the correct list
+        FAILED
+
+    TEST 11: Checks if removeBack() produces the correct list
+	    FAILED

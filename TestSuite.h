@@ -86,6 +86,12 @@ class TestSuite {
 	*/	
     void test10();
 
+    /** @pre None.
+	*   @post Tests if removeBack() functions properly.
+	*   @return None.
+	*/	
+    void test11();
+
     private:
     std::vector<int> testVector;
     std::vector<int> myVector;
