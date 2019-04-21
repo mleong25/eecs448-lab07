@@ -44,6 +44,30 @@ class TestSuite {
 	*/	
 	void test3();
 
+    /** @pre None.
+	*   @post Tests the size of the list after calling removeFront() on empty list
+	*   @return None.
+	*/	
+    void test4();
+
+    /** @pre None.
+	*   @post Tests the size of the list after calling addFront() followed by removeFront()
+	*   @return None.
+	*/	
+    void test5();
+
+    /** @pre None.
+	*   @post Tests the size of the list after calling addFront() followed by removeBack()
+	*   @return None.
+	*/	
+    void test6();
+
+    /** @pre None.
+	*   @post Tests if isEmpty functions properly.
+	*   @return None.
+	*/	
+    void test7();
+
     private:
     // const std::vector<int>& vectorCopy;
 };

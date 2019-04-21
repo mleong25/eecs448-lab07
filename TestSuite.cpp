@@ -11,6 +11,10 @@ void TestSuite::runTest() {
     test1();
     test2();
     test3();
+    test4();
+    test5();
+    test6();
+    test7();
 }
 
 void TestSuite::test1() {
@@ -52,6 +56,85 @@ void TestSuite::test3() {
 	std::cout << "TEST 3: Size of list on addFront()\n"; 
 
 	hasPassed = testList.size() == 1;
+	
+    if(hasPassed) {
+        std::cout << "\tPASSED\n" << std::endl;
+    } else {
+        std::cout << "\tFAILED\n" << std::endl;
+    }
+}
+
+void TestSuite::test4() {
+    LinkedListOfInts testList;
+	bool hasPassed = false;
+
+    testList.removeFront();
+	std::cout << "TEST 4: Size of list on removeFront() on empty list\n"; 
+
+	hasPassed = testList.size() == 0;
+	
+    if(hasPassed) {
+        std::cout << "\tPASSED\n" << std::endl;
+    } else {
+        std::cout << "\tFAILED\n" << std::endl;
+    }
+}
+
+void TestSuite::test5() {
+    LinkedListOfInts testList;
+	bool hasPassed = false;
+
+    testList.addFront(0);
+    testList.removeFront();
+	std::cout << "TEST 5: Size of list on addFront() followed by removeFront()\n"; 
+
+	hasPassed = testList.size() == 0;
+	
+    if(hasPassed) {
+        std::cout << "\tPASSED\n" << std::endl;
+    } else {
+        std::cout << "\tFAILED\n" << std::endl;
+    }
+}
+
+void TestSuite::test6() {
+    LinkedListOfInts testList;
+	bool hasPassed = false;
+
+    testList.addFront(0);
+    testList.removeBack();
+	std::cout << "TEST 6: Size of list on addFront() followed by removeBack()\n"; 
+
+	hasPassed = testList.size() == 0;
+	
+    if(hasPassed) {
+        std::cout << "\tPASSED\n" << std::endl;
+    } else {
+        std::cout << "\tFAILED\n" << std::endl;
+    }
+}
+
+void TestSuite::test7() {
+    LinkedListOfInts testList;
+	bool hasPassed = false;
+
+	std::cout << "TEST 7: Checking functionality of isEmpty with an empty list\n"; 
+
+	hasPassed = testList.isEmpty();
+	
+    if(hasPassed) {
+        std::cout << "\tPASSED\n" << std::endl;
+    } else {
+        std::cout << "\tFAILED\n" << std::endl;
+    }
+
+    hasPassed = false;
+
+    std::cout << "TEST 7: Checking functionality of isEmpty with a non-empty list\n"; 
+
+    testList.addFront(1);
+    testList.removeBack();
+	hasPassed = testList.isEmpty();
 	
     if(hasPassed) {
         std::cout << "\tPASSED\n" << std::endl;

@@ -1,0 +1,6 @@
+List of Bugs Caught!
+    TEST 5: Size of list on addFront() followed by removeFront()
+	    FAILED
+
+    TEST 6: Size of list on addFront() followed by removeBack()
+        FAILED
